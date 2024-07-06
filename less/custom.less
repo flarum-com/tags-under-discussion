@@ -1,0 +1,48 @@
+.customTagStyles() {
+  .TagLabel {
+    &:first-child {
+      padding-left: 0;
+    }
+
+    background-color: transparent;
+
+    &-text {
+      color: var(--tag-bg) !important;
+      text-transform: uppercase;
+    }
+
+    .icon {
+      display: none;
+    }
+  }
+}
+
+.DiscussionListItem {
+  .TagsUnderDiscussion {
+    display: inline-block !important;
+    margin-top: -8px !important;
+    margin-bottom: 8px !important;
+    vertical-align: middle;
+  }
+}
+
+.IndexPage .DiscussionListItem-info > .item-tags,
+.UserPage .DiscussionListItem-info > .item-tags,
+.DiscussionPage-list .DiscussionListItem-info > .item-tags,
+.DiscussionListItem .DiscussionListItem-content .TagsUnderDiscussion {
+  margin-top: 6px;
+  display: block;
+  right: unset;
+  top: unset;
+  max-width: unset;
+  position: static;
+  -webkit-mask-image: unset;
+  font-size: 13px;
+  font-weight: bold;
+
+  .TagLabel &:first-child {
+    padding-left: 0;
+  }
+
+  .customTagStyles();
+}

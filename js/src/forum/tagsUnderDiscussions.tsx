@@ -26,11 +26,11 @@ export default function onlySecondaryTagsOnDiscussionList() {
     let tags = discussion?.tags();
 
     if (tags?.length) {
-      tags = tags.sort((a, b) => getSortVal(a) - getSortVal(b));
+      tags = tags.sort((a, b) => getSortVal(a) - getSortVal(b)).map((t) => tagLabel(t));
 
       items.add(
         'tags',
-        tags.map((t) => tagLabel(t)),
+        (<div className="TagsUnderDiscussion">{tags}</div>),
         -100
       );
     }
