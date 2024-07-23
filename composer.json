@@ -32,6 +32,11 @@
         "flarum-extension": {
             "title": "Tags Under Discussion",
             "category": "feature"
+            "icon": {
+                "name": "fas fa-sort-down",
+                "backgroundColor": "#F28326",
+                "color": "#fff"
+            }
         }
     }
 }
