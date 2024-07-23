@@ -18,7 +18,7 @@ export default function onlySecondaryTagsOnDiscussionList() {
 
     // enforce requested ordering of secondary then primary tags
     const getSortVal = (tag) => {
-      if (tag.position() === null) return -10e6;
+      if (tag.isChild() === false) return -10e6;
 
       return tag.position();
     };
